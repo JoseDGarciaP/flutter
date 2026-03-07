@@ -14,15 +14,13 @@ class Layout extends StatelessWidget {
       ),
       drawer: DrawerCustom(),
       body: SafeArea(
-        top: true,
-        child: Center(
-          child: Column(
-            children: [
-              Text('Plantilla numero 1'),
-              child
-            ]
-          )
-        )
+  
+        child: Column(
+          children: [
+            Text('Plantilla numero 1'),
+            Expanded(child: child),
+          ],
+        ),
       ),
     );
   }
