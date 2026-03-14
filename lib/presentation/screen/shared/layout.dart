@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:router_go/presentation/widget/layout/drawer_custom.dart';
+import 'package:router/presentation/widget/layout/drawer_custom.dart';
 
 class Layout extends StatelessWidget {
   final Widget child;
@@ -9,18 +9,15 @@ class Layout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
+      appBar: AppBar(title: Text(title)),
       drawer: DrawerCustom(),
       body: SafeArea(
-  
+        top: true,
         child: Column(
           children: [
-            Text('Plantilla numero 1'),
-            Expanded(child: child),
-          ],
-        ),
+          Text('Plantilla número 1'),
+          Expanded(child: child)
+          ]),
       ),
     );
   }

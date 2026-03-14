@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:router_go/config/router/router_config.dart';
+import 'package:router/config/router/router_config.dart';
 
 class DrawerCustom extends StatelessWidget {
   const DrawerCustom({super.key});
@@ -12,14 +12,15 @@ class DrawerCustom extends StatelessWidget {
         children: [
           ...routerConfig.map((route) {
             return ListTile(
-              title: Text(route.title),
+              title: Text(route.name),
               subtitle: Text(route.description),
-              trailing: Icon(Icons.abc_rounded),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
               onTap: () {
+                Navigator.pop(context);
                 context.go(route.path);
               },
             );
-          })
+          }),
         ],
       ),
     );

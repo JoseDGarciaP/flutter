@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:router_go/model/product_model.dart';
-import 'package:router_go/service/product_service.dart';
+import 'package:router/model/product_model.dart';
+import 'package:router/service/product_service.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
@@ -15,10 +15,10 @@ class _ProductScreenState extends State<ProductScreen> {
   @override
   void initState() {
     super.initState();
-    getProduct();
+    getProductos();
   }
 
-  void getProduct() async {
+  void getProductos() async {
     final List<ProductModel> temporal = await ProductService().getProduct();
     setState(() {
       products = temporal;
@@ -27,14 +27,15 @@ class _ProductScreenState extends State<ProductScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ListView.builder(
-        itemCount: products.length,
-        itemBuilder: (context, index) => ListTile(
+    return ListView.builder(
+      itemCount: products.length,
+      itemBuilder: (context, index) {
+        //final product = products[index];
+        return ListTile(
           title: Text(products[index].title),
           subtitle: Text(products[index].description),
-        ),
-      ),
+        );
+      },
     );
   }
 }

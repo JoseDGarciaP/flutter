@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 
-List<Color> _colorTheme = [
-  Colors.blue,
+List<Color> _colorsTheme = [
   Colors.red,
   Colors.green,
+  Colors.blue,
   Colors.orange,
   Colors.purple,
+  Colors.yellow,
+  Colors.cyan,
+  Colors.pink,
 ];
 
 class AppTheme {
-  int selectedColor;
-
-  AppTheme({required this.selectedColor});
+  int selectColor;
+  AppTheme({required this.selectColor});
 
   ThemeData getThemeData() {
     return ThemeData(
       useMaterial3: true,
-      colorSchemeSeed: _colorTheme[selectedColor],
-      appBarTheme: AppBarTheme(backgroundColor: _colorTheme[selectedColor]),
+      colorSchemeSeed: _colorsTheme[selectColor],
+      appBarTheme: AppBarTheme(backgroundColor: _colorsTheme[selectColor]),
+      brightness: Brightness.dark,
     );
   }
 }

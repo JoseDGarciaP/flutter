@@ -6,12 +6,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Column(
-          children: [
-            Text('Hola Home'),
-            FilledButton(onPressed: () {}, child: Text('Botón')),
-          ],
-        ),
+      child: Column(
+        children: [
+          Text('Hola Home!'),
+          FilledButton(onPressed: () {}, child: Text("Hola button")),
+        ],
+      ),
     );
   }
 }

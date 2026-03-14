@@ -6,7 +6,7 @@ class RouterModel {
   String description;
   String path;
   GoRouterWidgetBuilder widget;
-  
+
   RouterModel({
     required this.name,
     required this.title,
@@ -14,4 +14,6 @@ class RouterModel {
     required this.path,
     required this.widget,
   });
+
+
 }

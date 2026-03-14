@@ -5,6 +5,6 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Hola Settings');
+    return Text("Hola settings!");
   }
 }
