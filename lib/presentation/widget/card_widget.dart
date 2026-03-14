@@ -9,6 +9,5 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(product.title);
 
-    //La idea es hacer una card personalizada para mostrar el producto, pero por ahora solo muestro el titulo
   }
 }
